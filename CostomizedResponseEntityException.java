@@ -17,4 +17,9 @@ public class CostomizedResponseEntityException extends ResponseEntityExceptionHa
 		ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
 		return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	
+	public final ResponseEntity<Object> handleActorExceptions(ActorException ex, WebRequest request) {
+		ExceptionResponse exceptionResponse = new ExceptionResponse (new Date (), ex.getMessage(), request.getDescription(false));
+		return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
 }
