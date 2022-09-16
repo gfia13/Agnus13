@@ -22,7 +22,7 @@ public class TodosController {
 		return "Todos Created"; 
 	}
 	@PutMapping("/putTodos")
-	public String puyTodos() {
+	public String putTodos() {
 		
 		return "Todos Update"; 
 	}
